@@ -116,14 +116,6 @@ settings = {
 Wstaw odpowiednie wartości zgodnie z opisem powyżej.
 
 
-
-
-
-
-
-
-
-
 ## 4 Model
 
 ### 4.1 Import zmiennych
@@ -163,6 +155,7 @@ def investment_return(t, stoch):
 ```
 
 **Zadanie:**
+
 - Wstaw odpowiednią nazwę atrybutu z długością polisy (`term`).
 - Wstaw nazwę kolumny z wartością stopy zwrotu (`rate`).
 
@@ -189,6 +182,7 @@ def fund_value(t, stoch):
 ```
 
 **Zadanie:**
+
 - W pierwszej instrukcji `return`: uzupełnij nazwę atrybutu z wysokością składki,
 - W drugiej: wpisz wywołanie funkcji `investment_return(t, stoch)`.
 
@@ -210,9 +204,6 @@ def shortfall(t, stoch):
 ```
 **Zadanie:**
 Uzupełnij wzór na różnicę: gwarantowana suma minus wartość funduszu.
-
-
-
 
 ### 4.5 Wartość czasowa opcji i gwarancji
 
