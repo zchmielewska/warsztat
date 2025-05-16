@@ -1,0 +1,31 @@
+from cashflower import variable
+
+from input import policy, interest_rate
+from settings import settings
+
+
+@variable()
+def survival_rate(t):
+    if t == 0:
+        return 1
+    else:
+        q = policy.get("mortality_rate")
+        return survival_rate(t - 1) * (1 - q)
+
+
+@variable()
+def expected_benefit(t):
+    if t == 0 or t > policy.get("remaining_term"):
+        return 0
+    else:
+        B = policy.get("benefit")
+        return B * survival_rate(t-1)
+
+
+@variable()
+def actuarial_present_value(t):
+    if t == settings["T_MAX_CALCULATION"]:
+        return expected_benefit(t)
+    else:
+        v = 1 / (1 + interest_rate)
+        return expected_benefit(t) + v * actuarial_present_value(t+1)

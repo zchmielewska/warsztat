@@ -50,7 +50,9 @@ policy = ModelPointSet(data=pd.DataFrame({
     "remaining_term": [ _____ ],
 }))
 ```
-**Zadanie:** uzupełnij brakujące wartości zgodnie z założeniami.
+**Zadanie:** 
+
+Uzupełnij brakujące wartości zgodnie z założeniami.
 
 ### 2.2 Założenia rynkowe
 
@@ -62,7 +64,9 @@ Załóż, że miesięczna stopa procentowa wynosi 0.5%. Zapisz ją jako zmienną
 interest_rate = _____
 ```
 
-** Zadanie:** Uzupełnij wartość stopy procentowej jako ułamek dziesiętny.
+**Zadanie:** 
+
+Uzupełnij wartość stopy procentowej jako ułamek dziesiętny.
 
 ## 3 Model
 
@@ -121,7 +125,7 @@ def survival_rate(t):
 
 ### 3.3 Oczekiwane świadczenie
 
-Zdefiniuj zmienną expected_benefit(t) – oczekiwaną wartość świadczenia wypłacanego w momencie zgonu w miesiącu t.
+Zdefiniuj zmienną `expected_benefit(t)` – oczekiwaną wartość świadczenia wypłacanego w miesiącu `t`.
 
 Skorzystaj ze wzoru:
 

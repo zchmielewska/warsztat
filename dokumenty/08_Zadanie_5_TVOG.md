@@ -28,7 +28,7 @@ create_model("zadanie_5")
 
 W pliku `input.py` przygotuj dane dotyczące ubezpieczenia. Utwórz model point set o nazwie `policy`, który będzie zawierał:
 
-- `premium` – roczna składka wpłacana na początku każdego roku: 9 000 zł
+- `premium` – roczna składka wpłacana na początku każdego roku: 19 000 zł
 - `guaranteed_benefit` – gwarantowana wypłata w przypadku dożycia: 100 000 zł
 - `term` – czas trwania umowy: 5 lat
 
@@ -62,9 +62,9 @@ Załóż, że stopa zwrotu ma rozkład normalny ze średnią 4% i odchyleniem st
 Wygeneruj 1000 scenariuszy po 5 lat każdy. Skorzystaj z poniższego kodu:
 
 ```python
-import pandas as pd
 import numpy as np
 
+np.random.seed(123)
 n_scenarios = 1000
 n_years = 5
 
@@ -72,7 +72,7 @@ stochastic_scenarios = pd.DataFrame({
     "scenario": np.repeat(np.arange(1, n_scenarios + 1), n_years),
     "t": list(range(1, n_years + 1)) * n_scenarios,
     "rate": np.random.normal(loc=0.04, scale=0.10, size=n_scenarios * n_years),
-})
+}).set_index(["scenario", "t"])
 ```
 **Zadanie:**
 Wygeneruj tabelę `stochastic_scenarios` zgodnie z powyższym kodem.
@@ -84,7 +84,7 @@ Wartość czasowa gwarancji zależy od przyjętej stopy dyskonta. Załóż, że 
 Zapisz ją jako zmienną skalarną `interest_rate` w pliku `input.py`:
 
 ```python
-interest_rate = 0.03
+interest_rate = _____
 ```
 
 **Zadanie:**
@@ -219,7 +219,7 @@ Uzupełnij wzór na różnicę: gwarantowana suma minus wartość funduszu.
 Zmienna `tvog(t, stoch)` oblicza bieżącą wartość przewidywanej dopłaty ubezpieczyciela, czyli wartość opcji gwarantowanej wypłaty.
 
 Założenia:
-- W ostatnim roku TVOG to po prostu shortfall,
+- W ostatnim roku TVOG to po prostu `shortfall`,
 - W wcześniejszych latach – to zdyskontowana wartość TVOG z roku następnego.
 
 Uzupełnij kod:

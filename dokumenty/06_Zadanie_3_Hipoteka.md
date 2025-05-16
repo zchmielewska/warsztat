@@ -2,7 +2,10 @@
 
 W tym zadaniu zbudujesz prosty model spłaty **kredytu hipotecznego**.
 
-Założeniem jest typowy kredyt z równą ratą miesięczną (tzw. kredyt annuitetowy). W modelu krok po kroku:
+Model będzie oparty na typowym kredycie z równą miesięczną ratą (tzw. kredycie annuitetowym).  
+
+W modelu krok po kroku:
+
 - obliczysz miesięczną stopę procentową na podstawie rocznej,
 - wyznaczysz wysokość miesięcznej raty,
 - rozdzielisz ratę na część odsetkową i kapitałową,
@@ -110,7 +113,7 @@ def payment():
     j = interest_rate()
     n = mortgage.get("_____")
     v = 1 / (1 + j)
-    return L / (_____ / _____)
+    return L / ((_____) / _____)
 ```
 **Zadanie:**
 - Uzupełnij nazwy atrybutów `loan` i `term`,
@@ -119,9 +122,9 @@ def payment():
 
 ### 3.4 Odsetki
 
-Odsetki naliczane w miesiącu `t` są równe saldu kredytu z poprzedniego miesiąca pomnożonemu przez miesięczną stopę procentową.
+Odsetki naliczane w miesiącu `t` są równe saldu kredytu z poprzedniego miesiąca (`balance(t-1)` - tej zmiennej jeszcze nie mamy) pomnożonemu przez miesięczną stopę procentową.
 
-Dla t = 0 przyjmujemy, że odsetki wynoszą 0 (kredyt jeszcze nie pracuje).
+Dla `t = 0` odsetki wynoszą 0 (jest to początek kredytu).
 
 Uzupełnij kod funkcji:
 
@@ -172,5 +175,4 @@ def balance(t):
 
 **Zadanie:**
 Uzupełnij nazwę atrybutu określającego początkowy kredyt.
-
 

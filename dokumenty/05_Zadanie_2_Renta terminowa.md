@@ -68,7 +68,7 @@ Uzupełnij wartość stopy procentowej jako ułamek dziesiętny.
 
 ## 3. Model
 
-W tej części utworzysz zmienneImport danychodelowe potrzebne do obliczenia bieżącej wartości aktuarialnej renty.
+W tej części utworzysz zmienne potrzebne do obliczenia bieżącej wartości aktuarialnej renty.
 
 ###  3.1 Import danych
 
@@ -85,7 +85,6 @@ Uzupełnij poniższy kod:
 ```python
 # model.py
 from input import _____, _____
-
 ```
 **Zadanie:**
 Wstaw odpowiednie nazwy zmiennych, które przygotowałeś/aś w `input.py`.

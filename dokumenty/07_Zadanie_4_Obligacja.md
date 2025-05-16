@@ -105,7 +105,7 @@ Zaimportuj trzy zmienne:
 - bazową stopę procentową.
 
 
-### 3.2 Ostatni miesiąc obligacji (`t_end`)
+### 3.2 Ostatni miesiąc obligacji
 
 Oblicz, ile miesięcy zostało do końca życia obligacji (czyli ile miesięcy jeszcze pozostało do momentu wykupu, licząc od daty wyceny).
 
