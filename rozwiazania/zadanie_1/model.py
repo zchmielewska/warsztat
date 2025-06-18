@@ -15,7 +15,7 @@ def survival_rate(t):
 
 @variable()
 def expected_benefit(t):
-    if t == 0 or t > policy.get("remaining_term"):
+    if t == 0 or t > policy.get("term"):
         return 0
     else:
         B = policy.get("sum_assured")
