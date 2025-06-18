@@ -24,7 +24,6 @@ def fund_value(t, stoch):
 def shortfall(t, stoch):
     if t == policy.get("term"):
         shortfall = max(0, policy.get("guaranteed_benefit") - fund_value(t, stoch))
-        # print(stoch, '->', shortfall)
         return shortfall
     return 0
 

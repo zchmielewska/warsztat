@@ -9,14 +9,15 @@ def interest_rate():
 
 @variable()
 def payment(t):
-    if t > mortgage.get("term"):
-        return 0
-
-    L = mortgage.get("loan")
-    j = interest_rate()
     n = mortgage.get("term")
-    v = 1 / (1 + j)
-    return L / ((1 - v**n) / j)
+
+    if t == 0 or t > n:
+        return 0
+    else:
+        L = mortgage.get("loan")
+        j = interest_rate()
+        v = 1 / (1 + j)
+        return L / ((1 - v**n) / j)
 
 
 @variable()
